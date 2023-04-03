@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './css/common.scss'
+import './css/movie.scss'
+import { Link, Route, Routes } from 'react-router-dom';
+import Main from './Main';
+import Glist from './Glist';
+import Detail from './Detail';
+import SearchResult from './SearchResult';
+import Home from './Home';
 
-function App() {
+const App = () => {
+
+  const genreList = [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Crime",
+    "Drama",
+    "Fantasy",
+    "Romance",
+    "Thriller",
+    "Western"
+  ];
+
+  const [movie, setMovie] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+
+      <Routes>
+        <Route path="/" element={null}>
+          <Route index element={<Home />}></Route>
+          <Route path="main" element={<Main />} />
+
+          <Route path="/detail/:id" element={<Detail />} />
+          {
+            genreList.map((it, idx) => {
+              return (
+                <Route path={it} element={<Glist genre={it} limit={20} />} key={idx}>
+                  <Route path={`/${it}/:id`} element={<Detail limit={50} />} />
+                </Route>
+              )
+            })
+          }
+
+          <Route path="/search" element={<SearchResult limit={50} />}>
+            <Route path="/search/:id" element={<Detail />} />
+          </Route>
+        </Route>
+
+
+      </Routes>
+
+      {/* <SearchResult /> */}
+
+      {/* <All /> */}
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
