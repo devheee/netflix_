@@ -54,8 +54,9 @@ const Main = ({ limit }) => {
                     }
                 </ul>
             </Header>
+            <Outlet />
             <section className='Main'>
-                <Outlet />
+
                 {
                     load
                         ? <Load />
@@ -72,7 +73,7 @@ const Main = ({ limit }) => {
                                     return (
                                         <div key={it.id} className="itm">
 
-                                            <Link to={`/detail/${it.id}`}>
+                                            <Link to={`/main/detail/${it.id}`}>
                                                 <figure>
                                                     <img src={it.large_cover_image} alt={it.title} onError={handleImgError} />
                                                 </figure>

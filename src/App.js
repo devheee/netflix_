@@ -32,18 +32,20 @@ const App = () => {
       <Routes>
         <Route path="/" element={null}>
           <Route index element={<Home />}></Route>
-          <Route path="main" element={<Main />} />
+          <Route path="main" element={<Main />}>
+            {
+              genreList.map((it, idx) => {
+                return (
+                  <Route path={`${it}`} element={<Glist genre={it} limit={20} />} key={idx}>
 
-          <Route path="/detail/:id" element={<Detail />} />
-          {
-            genreList.map((it, idx) => {
-              return (
-                <Route path={it} element={<Glist genre={it} limit={20} />} key={idx}>
-                  <Route path={`/${it}/:id`} element={<Detail limit={50} />} />
-                </Route>
-              )
-            })
-          }
+                  </Route>
+                )
+              })
+            }
+            <Route path="detail/:id" element={<Detail />} />
+          </Route>
+
+
 
           <Route path="/search" element={<SearchResult limit={50} />}>
             <Route path="/search/:id" element={<Detail />} />

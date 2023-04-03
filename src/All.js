@@ -30,7 +30,7 @@ const All = () => {
                     movie.map(it => {
                         return (
                             <li key={it.id} className='itm'>
-                                <Link to={`/detail/${it.id}`}>
+                                <Link to={`/main/detail/${it.id}`}>
                                     <figure>
                                         <img src={it.medium_cover_image} alt={it.title} />
                                     </figure>

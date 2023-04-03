@@ -46,7 +46,7 @@ const Glist = ({ genre, limit }) => {
                                     return (
                                         <div key={it.id} className="itm">
 
-                                            <Link to={`/${genre}/${it.id}`}>
+                                            <Link to={`/main/detail/${it.id}`}>
                                                 <figure>
                                                     <img src={it.large_cover_image} alt={it.title} onError={handleImgError} />
                                                 </figure>
