@@ -63,7 +63,7 @@
                 position: absolute;
                 inset: 0 0 0 0;
                 z-index: 999;
-                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.8) 100%);
             }
 
             img {
@@ -83,12 +83,14 @@
 
             strong {
                 display: block;
-                font-size: 45px;
+                font-size: 47px;
+                letter-spacing: 0.04rem;
             }
 
             span {
                 line-height: 1.5;
                 font-size: 20px;
+                letter-spacing: 0.04rem;
             }
 
             .start_btn {
