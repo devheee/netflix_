@@ -220,3 +220,32 @@
             }
         }
     }
+
+    .mainChildren {
+        padding: 100px 0 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+        border-image-slice: 1;
+
+        .h_inner {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+
+            .left {
+                h2 {
+                    font-size: 48px;
+                    margin: 0 0 20px 0;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 21px;
+                    line-height: 1.375;
+                }
+            }
+        }
+    }

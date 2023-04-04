@@ -51,7 +51,7 @@ const Home = () => {
                     <section class='mainTv'>
                         <div className="h_inner">
                             <div className="left">
-                                <h2>TV로 즐기세요</h2>
+                                <h2>TV로 즐기세요.</h2>
                                 <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
                             </div>
                             <div className="right">
@@ -67,7 +67,7 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-                    <section class='mainDevice'>
+                    <section className='mainDevice'>
                         <div className="h_inner">
                             <div className="left">
                                 <img src={process.env.PUBLIC_URL + '/device-pile.png'} alt="" />
@@ -79,6 +79,30 @@ const Home = () => {
                                     muted={true}
                                     playing={true}
                                     loop={true} />
+
+                            </div>
+                            <div className="right">
+                                <h2>다양한 디바이스에서<br /> 시청하세요.</h2>
+                                <p>각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section className='mainChildren'>
+                        <div className="h_inner">
+                            <div className="left">
+                                <h2>어린이 전용 프로필을<br />만들어 보세요.</h2>
+                                <p>자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험.<br /> 자녀에게 이 특별한 경험을 선물하세요. <br />넷플릭스 회원이라면 무료입니다.</p>
+                            </div>
+                            <div className="right">
+                                <img src={process.env.PUBLIC_URL + '/chil.png'} alt="" />
+
+                            </div>
+                        </div>
+                    </section>
+                    <section className='mainContent'>
+                        <div className="h_inner">
+                            <div className="left">
+                                <img src={process.env.PUBLIC_URL + '/mobile.jpg'} alt="" />
 
                             </div>
                             <div className="right">
