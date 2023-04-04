@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import './css/home.scss'
 import { AiOutlineRight } from "react-icons/ai";
+import ReactPlayer from 'react-player';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -47,7 +48,45 @@ const Home = () => {
 
                         </div>
                     </section>
-                    <section></section>
+                    <section class='mainTv'>
+                        <div className="h_inner">
+                            <div className="left">
+                                <h2>TV로 즐기세요</h2>
+                                <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+                            </div>
+                            <div className="right">
+                                <img src={process.env.PUBLIC_URL + '/tv.png'} alt="" />
+                                <ReactPlayer
+                                    className="re_video"
+                                    url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                                    width="451px"
+                                    height="250px"
+                                    muted={true}
+                                    playing={true}
+                                    loop={true} />
+                            </div>
+                        </div>
+                    </section>
+                    <section class='mainDevice'>
+                        <div className="h_inner">
+                            <div className="left">
+                                <img src={process.env.PUBLIC_URL + '/device-pile.png'} alt="" />
+                                <ReactPlayer
+                                    className="re_video"
+                                    url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
+                                    width="450px"
+                                    height="200px"
+                                    muted={true}
+                                    playing={true}
+                                    loop={true} />
+
+                            </div>
+                            <div className="right">
+                                <h2>다양한 디바이스에서<br /> 시청하세요.</h2>
+                                <p>각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                            </div>
+                        </div>
+                    </section>
                 </main>
                 <footer></footer>
 

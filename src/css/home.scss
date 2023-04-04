@@ -29,6 +29,11 @@
                     padding: 7px 10px 7px 35px;
                     color: #fff;
                     border-radius: 5px;
+                    font-size: 15px;
+
+                    option {
+                        color: #111;
+                    }
                 }
             }
 
@@ -123,9 +128,95 @@
                     &:hover {
                         background: #bd0710;
                     }
-
                 }
             }
         }
 
+    }
+
+    .mainTv {
+        padding: 100px 0 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+        border-image-slice: 1;
+
+        .h_inner {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 100px;
+
+            .left {
+                h2 {
+                    font-size: 48px;
+                    margin: 0 0 20px 0;
+                }
+
+                p {
+                    font-size: 21px;
+                    line-height: 1.375;
+                }
+            }
+
+            .right {
+                position: relative;
+                width: 100%;
+
+                .re_video {
+                    position: absolute;
+                    inset: 0 0 0 0;
+                    overflow: hidden;
+                    border: none;
+                    top: 96px;
+                    left: 79px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .mainDevice {
+        padding: 100px 0 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+        border-image-slice: 1;
+
+        .h_inner {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 100px;
+
+            .left {
+                position: relative;
+                width: 100%;
+
+                .re_video {
+                    position: absolute;
+                    inset: 0 0 0 0;
+                    overflow: hidden;
+                    border: none;
+                    top: 50px;
+                    left: 79px;
+                    z-index: -1;
+                }
+            }
+
+            .right {
+
+
+                h2 {
+                    font-size: 48px;
+                    margin: 0 0 20px 0;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 21px;
+                    line-height: 1.375;
+                }
+            }
+        }
     }
