@@ -3,6 +3,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom'
 import './css/home.scss'
 import { AiOutlineRight } from "react-icons/ai";
 import ReactPlayer from 'react-player';
+import AccordianMenu from './AccordianMenu';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -124,7 +125,8 @@ const Home = () => {
                         </div>
                     </section>
                     <section className='mainQna'>
-
+                        <h2>자주 묻는 질문</h2>
+                        <AccordianMenu />
                     </section>
                 </main>
                 <footer></footer>

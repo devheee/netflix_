@@ -177,7 +177,7 @@
     }
 
     .mainDevice {
-        padding: 100px 0 100px;
+        padding: 100px 0;
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
         border-image-slice: 1;
@@ -222,7 +222,7 @@
     }
 
     .mainChildren {
-        padding: 100px 0 100px;
+        padding: 100px 0;
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
         border-image-slice: 1;
@@ -251,7 +251,7 @@
     }
 
     .mainContent {
-        padding: 100px 0 100px;
+        padding: 100px 0;
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
         border-image-slice: 1;
@@ -326,5 +326,16 @@
                     line-height: 1.375;
                 }
             }
+        }
+    }
+
+    .mainQna {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        h2 {
+            font-size: 45px;
+            text-align: center;
         }
     }
