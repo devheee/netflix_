@@ -1,0 +1,129 @@
+    header {
+        width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        line-height: 100px;
+        justify-content: space-between;
+
+        h1 {
+            width: 150px;
+            font-size: 0;
+        }
+
+        .right {
+            display: flex;
+            gap: 30px;
+
+            .sel_box {
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 43%;
+                    left: 10px;
+                }
+
+                select {
+                    background: transparent;
+                    padding: 7px 10px 7px 35px;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+            }
+
+            .login {
+                a {
+                    padding: 7px 15px;
+                    border-radius: 5px;
+                    background: #e50914;
+
+                    &:hover {
+                        background: #bd0710;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainVisual {
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        text-align: center;
+
+
+        .bg_img {
+            position: absolute;
+            inset: 0 0 0 0;
+            z-index: -1;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0 0 0 0;
+                z-index: 999;
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+            }
+
+            img {
+                width: 100%;
+                height: 700px;
+                object-fit: cover;
+            }
+        }
+
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            height: 500px;
+
+            strong {
+                display: block;
+                font-size: 45px;
+            }
+
+            span {
+                line-height: 1.5;
+                font-size: 20px;
+            }
+
+            .start_btn {
+                display: flex;
+                gap: 10px;
+
+                input {
+                    background: rgba(0, 0, 0, 0.8);
+                    padding: 15px 15px;
+                    width: 400px;
+                    outline: none;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 5px;
+                    color: #f9f9f9;
+                }
+
+                a {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    padding: 7px 20px;
+                    border-radius: 5px;
+                    background: #e50914;
+                    color: #f9f9f9;
+                    font-size: 20px;
+                    outline: none;
+                    border: none;
+                    line-height: 32px;
+
+                    &:hover {
+                        background: #bd0710;
+                    }
+
+                }
+            }
+        }
+
+    }
