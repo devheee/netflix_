@@ -103,13 +103,28 @@ const Home = () => {
                         <div className="h_inner">
                             <div className="left">
                                 <img src={process.env.PUBLIC_URL + '/mobile.jpg'} alt="" />
+                                <div className="left_save">
+                                    <div className="poster">
+                                        <img src={process.env.PUBLIC_URL + '/boxshot.png'} alt="" />
+                                    </div>
+                                    <div className="text">
+                                        <strong>기묘한 이야기</strong>
+                                        <span>저장 중...</span>
+                                    </div>
+                                    <div className="download">
+                                        <img src={process.env.PUBLIC_URL + '/download-icon.gif'} alt="" />
+                                    </div>
 
+                                </div>
                             </div>
                             <div className="right">
-                                <h2>다양한 디바이스에서<br /> 시청하세요.</h2>
-                                <p>각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                                <h2>즐겨 보는 콘텐츠를 저장해<br /> 오프라인으로 시청하세요.</h2>
+                                <p>광고 없는 멤버십에서만 이용 가능합니다.</p>
                             </div>
                         </div>
+                    </section>
+                    <section className='mainQna'>
+
                     </section>
                 </main>
                 <footer></footer>
