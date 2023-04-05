@@ -7,7 +7,7 @@ const Header = ({ genreList }) => {
         <header className='Header'>
             <div className="inner flex">
                 <h1>
-                    <Link to="/">
+                    <Link to="/main">
                         <img src={process.env.PUBLIC_URL + '/logo.png'} alt="" />
                     </Link>
                 </h1>

@@ -11,7 +11,7 @@ const Gall = ({ genre }) => {
         e.target.src = process.env.PUBLIC_URL + "/cover.jpg";
     }
     const allMovie = async () => {
-        const res = await axios.get(`https://yts.mx/api/v2/list_movies.json?page=${page}&genre=${genre}&limit=16`);
+        const res = await axios.get(`https://yts.mx/api/v2/list_movies.json?page=${page}&genre=${genre}&limit=25`);
         console.log(res.data, res.data.data.movie_count);
         setMovie(res.data.data.movies);
         setTotal(res.data.data.movie_count)
@@ -27,8 +27,8 @@ const Gall = ({ genre }) => {
 
     return (
         <section className='All sec'>
-            <h3>{total}개의 영화가 있습니다.</h3>
-            <ul className='grid'>
+            <h3 className='h_inner' style={{ marginBottom: 50 }}>{total}개의 영화가 있습니다.</h3>
+            <ul className='grid h_inner'>
                 {
                     movie.map(it => {
                         return (
@@ -47,20 +47,20 @@ const Gall = ({ genre }) => {
                     })
                 }
             </ul>
-            <ul className='inner btn'>
+            <ul className='btn' >
                 {
-                    snum === 1 ? null : <li><button onClick={() => setSnum(snum - cnum)}>Prev</button></li>
+                    snum === 1 ? null : <li><button style={{ cursor: 'pointer' }} onClick={() => setSnum(snum - cnum)}>Prev</button></li>
                 }
 
                 <li>
                     {
-                        listNUm.slice(snum, snum + cnum).map((it, idx) => <button onClick={() => setPage(idx + snum)}
+                        listNUm.slice(snum, snum + cnum).map((it, idx) => <button onClick={() => setPage(idx + snum)} style={{ cursor: 'pointer' }}
                             key={idx}>{idx + snum}</button>)
                     }
                 </li>
 
                 {
-                    snum > total / pnum - cnum ? null : <li><button onClick={() => setSnum(snum + cnum)}>NEXT</button></li>
+                    snum > total / pnum - cnum ? null : <li><button style={{ cursor: 'pointer' }} onClick={() => setSnum(snum + cnum)}>NEXT</button></li>
                 }
             </ul>
 

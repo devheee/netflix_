@@ -54,7 +54,7 @@ const Detail = () => {
                             </p>
                             <ul>
                                 {
-                                    detailMovie.genres.map((it, idx) => <li key={idx}>{it}</li>)
+                                    detailMovie.genres.map((it, idx) => <li key={idx}>#{it}</li>)
                                 }
                             </ul>
                             <strong>{detailMovie.year}</strong>

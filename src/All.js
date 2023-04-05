@@ -44,7 +44,7 @@ const All = () => {
                     })
                 }
             </ul>
-            <ul className='inner btn'>
+            <ul className='btn'>
                 {
                     snum === 1 ? null : <li><button onClick={() => setSnum(snum - cnum)}>Prev</button></li>
                 }

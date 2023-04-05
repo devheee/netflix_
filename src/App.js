@@ -32,10 +32,9 @@ const App = () => {
 
 
       <Routes>
-
         <Route path='/' element={<Home />} />
-        <Route path="/main" element={<Layout genreList={genreList} />}>
-          <Route path='*' element={<Main />}>
+        <Route path='/main' element={<Layout genreList={genreList} />}>
+          <Route path='/main' element={<Main />}>
             <Route path={`detail/:id`} element={<Detail />} ></Route>
           </Route>
 
