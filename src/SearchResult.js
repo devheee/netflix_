@@ -2,8 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useSearchParams } from 'react-router-dom'
 import Load from './Load';
+import Header from './Header';
 
-const SearchResult = () => {
+const SearchResult = ({ genreList }) => {
     const [query, setQuery] = useSearchParams();
     const searchItm = query.get('query_term');
     console.log(searchItm);
@@ -36,12 +37,13 @@ const SearchResult = () => {
     return (
 
         <section className='Search sec'>
+            <Header genreList={genreList} />
             <Outlet />
             <h3>{total}개의 영화가 있습니다.</h3>
             {
                 load ? <Load />
                     : <div>
-                        <ul className='grid'>
+                        <ul className='h_inner grid'>
                             {/* <div>{total}</div> */}
                             {
                                 movie ? movie.movies?.map(it => {
@@ -61,7 +63,7 @@ const SearchResult = () => {
                                 }) : <>검색결과가 없습니다.</>
                             }
                         </ul>
-                        <ul className='inner btn'>
+                        <ul className='btn'>
                             <li>
                                 {
                                     listNUm.map((it, idx) => <button onClick={() => setPage(idx + snum)}

@@ -50,7 +50,7 @@ const App = () => {
         </Route>
 
 
-        <Route path="/search" element={<SearchResult limit={50} />}>
+        <Route path="/search" element={<SearchResult limit={50} genreList={genreList} />}>
           <Route path="/search/:id" element={<Detail />} />
         </Route>
 

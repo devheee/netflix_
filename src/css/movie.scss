@@ -146,6 +146,12 @@
 }
 
 .Search {
+
+    h3 {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
     form {
         input {
             width: 70%;
@@ -167,5 +173,20 @@
             font-size: 20px;
             vertical-align: middle;
         }
+    }
+
+    .btn {
+        text-align: center;
+
+        button {
+            outline: none;
+            border: none;
+            background: transparent;
+            color: #f9f9f9;
+            font-size: 17px;
+            margin: 20px 5px 50px 0;
+            cursor: pointer;
+        }
+
     }
 }
