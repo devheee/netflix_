@@ -33,7 +33,7 @@ const Gall = ({ genre }) => {
                     movie.map(it => {
                         return (
                             <li key={it.id} className='itm'>
-                                <Link to={`/${genre}/${it.id}`}>
+                                <Link to={`/main/${genre}/detail/${it.id}`}>
                                     <figure>
                                         <img src={it.medium_cover_image} alt={it.title} onError={handleImgError} />
                                     </figure>

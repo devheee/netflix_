@@ -41,19 +41,6 @@ const Main = ({ limit }) => {
     }, [])
     return (
         <>
-            <Header>
-                <ul className='flex'>
-                    {
-                        genreList.map((it, idx) => {
-                            return (
-                                <li key={idx}>
-                                    <Link to={it}>{it}</Link>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </Header>
             <Outlet />
             <section className='Main'>
 
@@ -100,9 +87,11 @@ const Main = ({ limit }) => {
                 </div>
             </section>
             <All />
-            <List genre='Drama' limit={16} />
+            {/* <List genre='Drama' limit={16} />
             <List genre='Action' limit={16} />
-            <List genre='Horror' limit={16} />
+            <List genre='Horror' limit={16} /> */}
+
+
         </>
     )
 }

@@ -8,7 +8,7 @@ const All = () => {
     const [total, setTotal] = useState(0);
     const [snum, setSnum] = useState(1);
     const allMovie = async () => {
-        const res = await axios.get(`https://yts.mx/api/v2/list_movies.json?page=${page}&limit=16`);
+        const res = await axios.get(`https://yts.mx/api/v2/list_movies.json?page=${page}&limit=40`);
         //console.log(res.data, res.data.data.movie_count);
         setMovie(res.data.data.movies);
         setTotal(res.data.data.movie_count)

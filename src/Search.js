@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Search = () => {
     const natigate = useNavigate();
@@ -28,7 +29,7 @@ const Search = () => {
             <form onSubmit={submitMovie}>
                 <input type="text" onChange={searchHandler} />
                 <button>
-                    <i className='xi-search'></i>
+                    <AiOutlineSearch />
                 </button>
             </form>
         </div>

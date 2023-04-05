@@ -31,12 +31,17 @@ const Detail = () => {
         // return () => {
         //     cover.current.removeEventListener('wheel', wheelStop);
         // }
-    }, [id])
+    }, [id]);
+
+
+    const closeHandler = (e) => {
+        e.stopPropagation();
+    }
     return (
         <section className={`Detail ${on}`} onClick={() => setOn("on")} ref={cover}>
             {
                 load ? <Load /> :
-                    <div className="inner flex">
+                    <div className="inner flex" onClick={closeHandler}>
                         <div className="img">
                             <figure>
                                 <img src={detailMovie.large_cover_image} alt="" onError={handleImgError} />
@@ -54,9 +59,9 @@ const Detail = () => {
                             </ul>
                             <strong>{detailMovie.year}</strong>
                         </div>
-                        <button className='close'>
+                        {/* <button className='close'>
                             <i className='xi-close'></i>
-                        </button>
+                        </button> */}
 
                     </div>
             }

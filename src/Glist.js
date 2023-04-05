@@ -28,51 +28,7 @@ const Glist = ({ genre, limit }) => {
     return (
         <>
 
-            <section className='Main'>
-                <Outlet />
-                {
-                    load
-                        ? <Load />
-                        :
-                        <Slider
-                            slidesToShow={5}
-                            arrows={false}
-                            ref={MS}
-                            centerMode={true}
-                            centerPadding={'100px'}
-                        >
-                            {
-                                movie.map(it => {
-                                    return (
-                                        <div key={it.id} className="itm">
-
-                                            <Link to={`/main/detail/${it.id}`}>
-                                                <figure>
-                                                    <img src={it.large_cover_image} alt={it.title} onError={handleImgError} />
-                                                </figure>
-                                                <div className="case">
-                                                    <div className='title'>{it.title_long}</div>
-                                                    <div className='desc'>{it.description_full.substr(0, 100)} ... </div>
-                                                    <ul className='genre'>
-                                                        {
-                                                            it.genres.map((g, i) => <li key={i}>{g}</li>)
-                                                        }
-                                                    </ul>
-                                                </div>
-                                            </Link>
-
-                                        </div>
-                                    )
-                                })
-                            }
-                        </Slider>
-                }
-                <div className="arrows">
-                    <i className="xi-arrow-left" onClick={() => MS.current.slickPrev()}></i>
-                    <i className="xi-arrow-right" onClick={() => MS.current.slickNext()}></i>
-                </div>
-
-            </section>
+            <Outlet />
             <Gall genre={genre} />
         </>
     )

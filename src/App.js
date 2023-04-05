@@ -7,6 +7,8 @@ import Glist from './Glist';
 import Detail from './Detail';
 import SearchResult from './SearchResult';
 import Home from './Home';
+import Layout from './Layout';
+import Footer from './Footer';
 
 const App = () => {
 
@@ -30,31 +32,33 @@ const App = () => {
 
 
       <Routes>
-        <Route path="/" element={null}>
-          <Route index element={<Home />}></Route>
-          <Route path="main" element={<Main />}>
-            {
-              genreList.map((it, idx) => {
-                return (
-                  <Route path={`${it}`} element={<Glist genre={it} limit={20} />} key={idx}>
 
-                  </Route>
-                )
-              })
-            }
-            <Route path="detail/:id" element={<Detail />} />
+        <Route path='/' element={<Home />} />
+        <Route path="/main" element={<Layout genreList={genreList} />}>
+          <Route path='*' element={<Main />}>
+            <Route path={`detail/:id`} element={<Detail />} ></Route>
           </Route>
 
-
-
-          <Route path="/search" element={<SearchResult limit={50} />}>
-            <Route path="/search/:id" element={<Detail />} />
-          </Route>
+          {
+            genreList.map((it, idx) => {
+              return (
+                <Route path={`${it}`} element={<Glist genre={it} limit={20} />} key={idx}>
+                  <Route path={`detail/:id`} element={<Detail />} />
+                </Route>
+              )
+            })
+          }
         </Route>
 
 
-      </Routes>
+        <Route path="/search" element={<SearchResult limit={50} />}>
+          <Route path="/search/:id" element={<Detail />} />
+        </Route>
 
+
+
+      </Routes>
+      <Footer />
       {/* <SearchResult /> */}
 
       {/* <All /> */}

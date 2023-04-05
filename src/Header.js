@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Search from './Search'
 
-const Header = ({ children }) => {
+const Header = ({ genreList }) => {
     return (
         <header className='Header'>
             <div className="inner flex">
@@ -12,7 +12,17 @@ const Header = ({ children }) => {
                     </Link>
                 </h1>
                 <nav className='gnb'>
-                    {children}
+                    <ul className='flex'>
+                        {
+                            genreList.map((it, idx) => {
+                                return (
+                                    <li key={idx}>
+                                        <Link to={it}>{it}</Link>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
                 </nav>
                 <Search />
             </div>
