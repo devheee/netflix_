@@ -60,7 +60,7 @@ const SearchResult = ({ genreList }) => {
                                         </li>
 
                                     )
-                                }) : <>검색결과가 없습니다.</>
+                                }) : <div className='search_null'>검색결과가 없습니다.</div>
                             }
                         </ul>
                         <ul className='btn'>

@@ -17,7 +17,7 @@ const Header = ({ genreList }) => {
                             genreList.map((it, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <Link to={it}>{it}</Link>
+                                        <Link to={`/main/${it}`}>{it}</Link>
                                     </li>
                                 )
                             })
