@@ -51,7 +51,47 @@
         }
     }
 
-    @media (max-width:768px) {}
+    @media (max-width:768px) {
+        .right {
+            position: fixed;
+            display: flex;
+            gap: 30px;
+
+            .sel_box {
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 43%;
+                    left: 10px;
+                }
+
+                select {
+                    background: transparent;
+                    padding: 7px 10px 7px 35px;
+                    color: #fff;
+                    border-radius: 5px;
+                    font-size: 15px;
+
+                    option {
+                        color: #111;
+                    }
+                }
+            }
+
+            .login {
+                a {
+                    padding: 7px 15px;
+                    border-radius: 5px;
+                    background: #e50914;
+
+                    &:hover {
+                        background: #bd0710;
+                    }
+                }
+            }
+        }
+    }
 
     .mainVisual {
         justify-content: center;
