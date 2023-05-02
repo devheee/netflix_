@@ -1,0 +1,49 @@
+.ac_li {}
+
+.Atitle {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    font-size: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+
+    &on {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        font-size: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        margin: 0 auto 1px auto;
+        cursor: pointer;
+    }
+
+    &on:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    &+strong {
+        display: none;
+    }
+
+    &on+strong {
+        display: block;
+        width: 1200px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1.5rem;
+        line-height: 1.5;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 auto 20px auto;
+
+        white-space: pre-line;
+        word-break: keep-all;
+    }
+}
