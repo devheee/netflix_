@@ -132,8 +132,6 @@ const Home = () => {
                         <AccordianMenu />
                     </section>
                 </main>
-
-
             </div>
         </>
     )
