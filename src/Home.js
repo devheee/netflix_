@@ -57,14 +57,16 @@ const Home = () => {
                             </div>
                             <div className="right">
                                 <img src={process.env.PUBLIC_URL + '/tv.png'} alt="" />
-                                <ReactPlayer
-                                    className="re_video"
-                                    url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
-                                    width="451px"
-                                    height="250px"
-                                    muted={true}
-                                    playing={true}
-                                    loop={true} />
+                                <div className='v_wrapper'>
+                                    <ReactPlayer
+                                        className="re_video"
+                                        url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                                        width="100%"
+                                        height="100%"
+                                        muted={true}
+                                        playing={true}
+                                        loop={true} />
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -72,15 +74,16 @@ const Home = () => {
                         <div className="h_inner">
                             <div className="left">
                                 <img src={process.env.PUBLIC_URL + '/device-pile.png'} alt="" />
-                                <ReactPlayer
-                                    className="re_video"
-                                    url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
-                                    width="450px"
-                                    height="200px"
-                                    muted={true}
-                                    playing={true}
-                                    loop={true} />
-
+                                <div className='v_wrapper'>
+                                    <ReactPlayer
+                                        className="re_video"
+                                        url="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
+                                        width="100%"
+                                        height="220px"
+                                        muted={true}
+                                        playing={true}
+                                        loop={true} />
+                                </div>
                             </div>
                             <div className="right">
                                 <h2>다양한 디바이스에서<br /> 시청하세요.</h2>

@@ -47,3 +47,50 @@
         word-break: keep-all;
     }
 }
+
+@media (max-width:768px) {
+    .Atitle {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        cursor: pointer;
+
+        &on {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            cursor: pointer;
+        }
+
+        &on:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        &+strong {
+            display: none;
+        }
+
+        &on+strong {
+            display: block;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            line-height: 1.5;
+            font-size: 20px;
+            font-weight: 400;
+
+            white-space: pre-line;
+            word-break: keep-all;
+        }
+    }
+}
